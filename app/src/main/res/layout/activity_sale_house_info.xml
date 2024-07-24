@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:id="@+id/item_short_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/property_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="27 Апреля 1997"
+            android:textSize="6pt"
+            android:fontFamily="sans-serif-condensed"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/property_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_views_black_24dp"
+            android:drawableTint="@color/colorDefault"
+            android:drawableTintMode="src_over"
+            android:drawablePadding="5dp"
+            android:gravity="fill"
+            android:textSize="6pt"
+            android:fontFamily="sans-serif-condensed"
+            android:text="143"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/property_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textSize="12pt"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:text="134 000 $"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/property_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="8pt"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:text="2 комнт. 100 м2, 5 этаж"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/property_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textStyle="bold"
+        android:textSize="6pt"
+        android:text="Минск, Федорова ул., 23 д."/>
+
+    <LinearLayout
+        android:id="@+id/property_photo_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/image_recycler_view"
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/image_item"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_contacts_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Контактная информация"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_update_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Дата обновления"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_update_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_agent_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Агент"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_agent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_contact_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Контактное лицо"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_email_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="E-mail"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_address_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Местоположение"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_region_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Область"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_direction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Направление"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_city_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Город"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_district_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Район"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_street_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Улица"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_house_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Номер дома"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_house"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_area_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Участок"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_land_area_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Площадь участка"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_land_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_build_area_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Площадь застройки"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_build_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_house_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Дом"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Тип дома"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_rooms_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Количество комнат"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_rooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_square_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Общая площадь"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="123"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_square_useful_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Жилая"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_square_useful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="123"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_kitchen_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Кухня"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_kitchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="56"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_levels_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Количество уровней"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_levels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_wall_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Материал cтен"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_wall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_roof_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Материал крыши"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_roof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_phone_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Телефон"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_heating_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Отопление"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_heating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_electricity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Электричество"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_electricity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_gas_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Газ"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_water_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Вода"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_sewer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Канализация"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_sewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_year_of_construction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Год постройки"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_year_of_construction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_ready_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Готовность"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_ready"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_seller_info_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Информация от продавца"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/property_additionally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="6pt"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:text="27 Апреля 1997"
+            tools:ignore="UnusedAttribute" />
+
+        <LinearLayout
+            android:id="@+id/seller_separator"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/property_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="6pt"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:text="27 Апреля 1997"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_sell_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Условия продажи"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_sales_terms_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Условия продажи"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_sales_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_own_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Собственность"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_own"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Стоимость"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/property_source_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:text="Информация об источнике"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/property_site_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Сайт"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/property_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="6pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:text="27 Апреля 1997"
+                tools:ignore="UnusedAttribute" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/site_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorAccent"
+            android:clickable="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="8pt"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="false"
+            android:text="Посмотреть на сайте"
+            tools:targetApi="lollipop"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Belarussian property</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="action_settings">Сортировка</string>
+    <string name="drawer_title_1">Анализ стоимости</string>
+    <string name="drawer_title_2">Продажа недвижимости</string>
+    <string name="drawer_title_3">Аренда недвижимости</string>
+    <string name="drawer_item_sale">Продажа</string>
+    <string name="drawer_item_rent">Аренда</string>
+    <string name="drawer_item_flats">Квартиры</string>
+    <string name="drawer_item_rooms">Комнаты</string>
+    <string name="drawer_item_houses">Дома</string>
+    <string name="drawer_item_areas">Участки</string>
+    <string name="drawer_item_bookmarks">Закладки</string>
+    <string name="drawer_item_settings">Настройки</string>
+    <string name="drawer_item_exit">Выйти</string>
+    <string name="rate_usd" translatable="false">USD</string>
+    <string name="rate_byn" translatable="false">BYN</string>
+    <string name="sort_date">По дате</string>
+    <string name="sort_price">По цене</string>
+    <string name="sort_default">По умолчанию</string>
+    <string name="not_found">Не найдено\nПопробуйте изменить условия поиска</string>
+    <string name="not_price">Цена договорная</string>
+    <string name="not_info">Нет информации</string>
+    <string name="not_address">Адрес не указан</string>
+</resources>

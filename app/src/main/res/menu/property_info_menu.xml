@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/option_share"
+        android:orderInCategory="2"
+        android:title="Поделиться"
+        android:icon="@drawable/ic_share_black_24dp"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/option_favorite"
+        android:orderInCategory="1"
+        android:title="В закладки"
+        android:icon="@drawable/ic_bookmark_border_black_24dp"
+        app:showAsAction="ifRoom">
+    </item>
+</menu>

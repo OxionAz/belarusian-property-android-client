@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="metro_stations">
+        <item>Могилевская</item>
+        <item>Автозаводская</item>
+        <item>Партизанская</item>
+        <item>Тракторный завод</item>
+        <item>Пролетарская</item>
+        <item>Первомайская</item>
+        <item>Купаловская (Октябрьская)</item>
+        <item>Немига</item>
+        <item>Фрунзенская</item>
+        <item>Молодежная</item>
+        <item>Пушкинская</item>
+        <item>Спортивная</item>
+        <item>Кунцевщина</item>
+        <item>Каменная горка</item>
+    </string-array>
+</resources>

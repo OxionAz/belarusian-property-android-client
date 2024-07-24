@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.oxionaz.belarussian_property"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Necessary permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+
+    <uses-sdk tools:overrideLibrary="com.mzelzoghbi.zgallery"/>
+
+    <application
+        android:name="com.oxionaz.belarussian_property.other.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="API_KEY"/>
+
+        <activity
+            android:name=".view.activities.SplashActivity_"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activities.UserActivity_"
+            android:label="@string/app_name"
+            android:theme="@style/LoginTheme">
+        </activity>
+
+        <activity
+            android:name=".view.activities.MainActivity_"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.ForMainActivity">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleFlatsSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleRoomsSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleHousesSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleAreasSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentFlatsSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentRoomsSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentHousesSearchActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleFlatActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleRoomActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleHouseActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.SaleAreaActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentFlatActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentRoomActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.RentHouseActivity_"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".view.activities.MapActivity"
+            android:label="@string/app_name">
+        </activity>
+
+    </application>
+</manifest>

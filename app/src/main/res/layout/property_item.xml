@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:clickable="true"
+    app:cardCornerRadius="0dp"
+    tools:ignore="UnusedAttribute">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="8dp"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:layout_rowSpan="5"
+                android:background="@drawable/home_image"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#fff"
+                tools:ignore="RtlHardcoded"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:textSize="6pt"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="start|center"
+                android:text="27 Апреля 2016"
+                tools:ignore="UnusedAttribute"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:textStyle="bold"
+                android:textSize="12pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="fill"
+                android:gravity="start|center"
+                android:text="57 000 $"
+                tools:ignore="UnusedAttribute"
+                />
+
+            <TextView
+                android:id="@+id/info"
+                android:textSize="8pt"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:layout_gravity="fill"
+                android:gravity="start|center"
+                android:text="2 комнт. 100 м2, 5 этаж"
+                tools:ignore="UnusedAttribute"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:textStyle="bold"
+                android:textSize="6pt"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="fill"
+                android:gravity="start|center"
+                android:text="Минск, Федорова ул., 23 д."
+                tools:ignore="UnusedAttribute"/>
+
+            <TextView
+                android:id="@+id/metro"
+                android:visibility="gone"
+                android:textSize="6pt"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="240dp"
+                android:layout_gravity="fill"
+                android:gravity="start|center"
+                android:text="Каменная горка"
+                android:drawablePadding="4dp"/>
+
+        </GridLayout>
+
+    <ImageButton
+        android:id="@+id/bookmark"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_gravity="end"
+        app:srcCompat="@drawable/ic_bookmark_border_black_24dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Add to bookmark" />
+
+</android.support.v7.widget.CardView>

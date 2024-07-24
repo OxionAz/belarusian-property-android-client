@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="@string/drawer_title_1">
+    <menu>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_sale_analyses"
+                android:title="@string/drawer_item_sale"
+                android:icon="@drawable/ic_show_chart_black_24dp"/>
+            <item
+                android:id="@+id/drawer_rent_analyses"
+                android:title="@string/drawer_item_rent"
+                android:icon="@drawable/ic_show_chart_black_24dp"/>
+        </group>
+    </menu>
+</item>
+<item android:title="@string/drawer_title_2">
+    <menu>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_sale_flats"
+                android:title="@string/drawer_item_flats"
+                android:icon="@drawable/ic_domain_black_24dp"/>
+            <item
+                android:id="@+id/drawer_sale_rooms"
+                android:title="@string/drawer_item_rooms"
+                android:icon="@drawable/ic_hotel_black_24dp"/>
+            <item
+                android:id="@+id/drawer_sale_houses"
+                android:title="@string/drawer_item_houses"
+                android:icon="@drawable/ic_home_black_24dp"/>
+            <item
+                android:id="@+id/drawer_sale_areas"
+                android:title="@string/drawer_item_areas"
+                android:icon="@drawable/ic_terrain_black_24dp"/>
+        </group>
+    </menu>
+</item>
+<item android:title="@string/drawer_title_3">
+    <menu>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/drawer_rent_flats"
+                android:title="@string/drawer_item_flats"
+                android:icon="@drawable/ic_domain_black_24dp"/>
+            <item
+                android:id="@+id/drawer_rent_rooms"
+                android:title="@string/drawer_item_rooms"
+                android:icon="@drawable/ic_hotel_black_24dp"/>
+            <item
+                android:id="@+id/drawer_rent_houses"
+                android:title="@string/drawer_item_houses"
+                android:icon="@drawable/ic_home_black_24dp"/>
+        </group>
+    </menu>
+</item>
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/drawer_bookmarks"
+        android:title="@string/drawer_item_bookmarks"
+        android:icon="@drawable/ic_bookmark_black_24dp"/>
+    <item
+        android:id="@+id/drawer_exit"
+        android:title="@string/drawer_item_exit"
+        android:icon="@drawable/ic_exit_black_24dp"/>
+</group>
+</menu>
